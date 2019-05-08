@@ -1,2 +1,2 @@
-# houdini2open3d
+# Houdini 2 Open3D
 Open3D operators in SideFX Houdini
