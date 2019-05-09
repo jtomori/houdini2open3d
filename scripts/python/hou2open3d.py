@@ -198,7 +198,7 @@ def icp_registration():
     has_n_target = bool(node_geo_target.findPointAttrib("N"))
 
     if not has_xform_source:
-        raise hou.NodeError("Input does not have 'xform' detail attribute.")
+        node_geo.addAttrib(hou.attribType.Global, "xform", default_value=(0.0,)*16, create_local_variable=False)
 
     if not has_n_source or not has_n_target:
         raise hou.NodeError("One of the inputs does not have 'N' attribute.")
